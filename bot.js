@@ -9,7 +9,6 @@ bot.on('voice', (msg) => {
 
   let chunks = [];
   
-
   stream.on('data', (chunk) => chunks.push(chunk));
   stream.on('end', async () => {
     const axiosConfig = {
