@@ -23,8 +23,7 @@ bot.on('voice', (msg) => {
       const response = await axios(axiosConfig)
       const {result} = response.data;
       const chatId = msg.chat.id;
-      const userName = msg.from.first_name
-      console.log(result)
+      const userName = msg.from.first_name;
       bot.sendMessage(chatId, `${userName} говорит:\n${result}`)
     } catch (error) {
       console.log('Error:', error);
